@@ -50,12 +50,13 @@ class VC: UIViewController {
         focusedLabel.sendSubview(toBack: tableView)
         
         focusedLabel.isHidden = true
-        focusedLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        focusedLabel.font = UIFont.boldSystemFont(ofSize: 50)
         focusedLabel.textColor = .black
         focusedLabel.textAlignment = .center
-        focusedLabel.highlightedTextColor = .blue
-        focusedLabel.backgroundColor = .color(.gray, alpha: 0.5)
-        
+        focusedLabel.highlightedTextColor = .white
+        focusedLabel.backgroundColor = .color(.black, alpha: 0.3)
+        focusedLabel.center = view.center
+
         indexView.delegate = self
         indexView.indexes = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"]
         
@@ -68,13 +69,13 @@ class VC: UIViewController {
             make.top.equalTo(tableView).offset(66)
             make.bottom.equalTo(tableView).offset(-66)
             make.leftMargin.equalTo(tableView)
-            make.width.equalTo(20)
+            make.width.equalTo(30)
         }
         
         focusedLabel.snp.remakeConstraints { (make) in
             make.centerX.equalTo(tableView)
             make.centerY.equalTo(tableView)
-            make.size.equalTo(CGSize(width: 50, height: 50))
+            make.size.equalTo(CGSize(width: 66, height: 66))
         }
     }
     
