@@ -1,0 +1,6 @@
+framework module Pods_WJIndexTableView {
+  umbrella header "Pods-WJIndexTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}
