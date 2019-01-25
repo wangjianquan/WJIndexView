@@ -96,7 +96,7 @@ class VC: UIViewController {
             do {
                 let chice_Car = try JSONDecoder().decode(Chice_Car.self, from: data)
                
-//                print("--------- \(self.sectionArray)")
+                print("--------- \(chice_Car.list)")
 
             }catch{
                 print(error)

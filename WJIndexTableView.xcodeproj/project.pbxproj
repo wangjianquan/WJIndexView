@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1395347BB9F5479046D532EE /* Pods_WJIndexTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B1C294F410F0B446B0E033 /* Pods_WJIndexTableView.framework */; };
+		7C3062CB1FF51B0600FDAF49 /* carInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 7C3062CA1FF51B0600FDAF49 /* carInfo.json */; };
 		7D3B35381FF3B9E100C1513C /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B35341FF3B9E100C1513C /* VC.swift */; };
 		7D3B35391FF3B9E100C1513C /* TableViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B35351FF3B9E100C1513C /* TableViewIndex.swift */; };
 		7D3B353A1FF3B9E100C1513C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B35361FF3B9E100C1513C /* UIColor+Extension.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		03C769A4D22B508E7B001307 /* Pods-WJIndexTableView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WJIndexTableView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WJIndexTableView/Pods-WJIndexTableView.debug.xcconfig"; sourceTree = "<group>"; };
+		7C3062CA1FF51B0600FDAF49 /* carInfo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = carInfo.json; sourceTree = "<group>"; };
 		7D3B35341FF3B9E100C1513C /* VC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		7D3B35351FF3B9E100C1513C /* TableViewIndex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewIndex.swift; sourceTree = "<group>"; };
 		7D3B35361FF3B9E100C1513C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				7D3B35361FF3B9E100C1513C /* UIColor+Extension.swift */,
 				7D3B35371FF3B9E100C1513C /* UIStackView+Extension.swift */,
 				7D3B35341FF3B9E100C1513C /* VC.swift */,
+				7C3062CA1FF51B0600FDAF49 /* carInfo.json */,
 				7D4146751FECDD6B0059BF83 /* AppDelegate.swift */,
 				7D4146771FECDD6B0059BF83 /* ViewController.swift */,
 				7DE8040F1FF1DFE5007AA2A3 /* WJIndexView.swift */,
@@ -173,6 +176,7 @@
 			files = (
 				7D4146801FECDD6B0059BF83 /* LaunchScreen.storyboard in Resources */,
 				7D41467D1FECDD6B0059BF83 /* Assets.xcassets in Resources */,
+				7C3062CB1FF51B0600FDAF49 /* carInfo.json in Resources */,
 				7D41468A1FECE1FD0059BF83 /* IndexCell.xib in Resources */,
 				7D41467B1FECDD6B0059BF83 /* Main.storyboard in Resources */,
 			);
