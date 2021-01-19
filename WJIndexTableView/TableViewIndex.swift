@@ -36,9 +36,7 @@ open class TableIndexView: UIControl {
 	// MARK: - Overrides
 	public override init(frame: CGRect) {
 		super.init(frame: frame)
-		
-		setupView()
-		
+        setupView()
 		setup()
 	}
 	
@@ -46,7 +44,6 @@ open class TableIndexView: UIControl {
 		super.init(coder: aDecoder)
 		
 		setupView()
-		
 		setup()
 	}
 	
@@ -56,7 +53,7 @@ open class TableIndexView: UIControl {
 	
 	func setupView() {
 		addSubview(stackView)
-		
+        self.layer.cornerRadius = 3
 		applyAutoLayout()
 	}
 	
@@ -87,7 +84,7 @@ open class TableIndexView: UIControl {
 		stackView.removeAllArrangedSubview()
 		itemsLabel.removeAll()
 		
-		for (index, item) in self.indexes.enumerated() {
+        for (_, item) in self.indexes.enumerated() {
 			let label = UILabel()
 			label.font = self.titleFont
 			label.textColor = self.titleColor

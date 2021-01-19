@@ -140,9 +140,9 @@ class WJIndexView: UIControl {
     }
     
     public func getSelectedItemFontColor() -> UIColor {
-        if selectedItemFontColor == nil{
+//        if selectedItemFontColor == nil{
             self.selectedItemFontColor = UIColor.init(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
-        }
+//        }
         return selectedItemFontColor
     }
     
@@ -249,7 +249,7 @@ class WJIndexView: UIControl {
         
         //计算所有索引项的大小
         for item: String in self.indexItems! {
-            let currentItemSize : CGSize = item.size(withAttributes: [NSAttributedStringKey.font:font])
+            let currentItemSize : CGSize = item.size(withAttributes: [NSAttributedString.Key.font:font])
             if currentItemSize.height < 5.0 {
                 return
             }
@@ -261,7 +261,7 @@ class WJIndexView: UIControl {
         
         //根据选择项的字体大小，计算是否使用了最长索引项的宽度。
         for item: String in indexItems! {
-            let currentItemSize : CGSize = item.size(withAttributes: [NSAttributedStringKey.font:font])
+            let currentItemSize : CGSize = item.size(withAttributes: [NSAttributedString.Key.font:font])
             if currentItemSize.width > self.maxWidth {
                 self.maxWidth = currentItemSize.width
             }
@@ -327,11 +327,11 @@ class WJIndexView: UIControl {
             var point: CGPoint = CGPoint.zero
             if itemsAligment == .center {
             
-                let itemSize: CGSize = item.size(withAttributes: [NSAttributedStringKey.font:font])
+                let itemSize: CGSize = item.size(withAttributes: [NSAttributedString.Key.font:font])
                 point.x = (firstItemOrigin?.x)! - itemSize.width / 2
             }else if itemsAligment == .right {
                 
-                let itemSize: CGSize = item.size(withAttributes: [NSAttributedStringKey.font:font])
+                let itemSize: CGSize = item.size(withAttributes: [NSAttributedString.Key.font:font])
                 point.x = (firstItemOrigin?.x)! - itemSize.width
             } else {
                 point.x = (firstItemOrigin?.x)!
@@ -614,7 +614,7 @@ class WJIndexView: UIControl {
                     CFAttributedStringSetAttribute(attrStr, CFRangeMake(0, CFAttributedStringGetLength(attrStr)), kCTFontAttributeName, currentFont);
                     let framesetter:CTFramesetter = CTFramesetterCreateWithAttributedString(attrStr);
                     let size = CGSize.init(width:CGFloat( maxWidth), height: CGFloat(maxHeight*2.0))
-                    let textSize:CGSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRange.init(location: 0, length: currentItem.characters.count), nil, size, nil)
+                    let textSize:CGSize = CTFramesetterSuggestFrameSizeWithConstraints(framesetter, CFRange.init(location: 0, length: currentItem.count), nil, size, nil)
                     
                     let fontColor:UIColor = (itemAttribute as AnyObject).object(forKey: "color" as AnyObject) as! UIColor
                     
@@ -872,7 +872,7 @@ class WJIndexView: UIControl {
         context.saveGState()
         
         // obtain size of drawn label
-        let newSize:CGSize = label.size(withAttributes: [NSAttributedStringKey.font:font])
+        let newSize:CGSize = label.size(withAttributes: [NSAttributedString.Key.font:font])
 
         // determine correct rect for this label
         let rect = CGRect.init(x:point.x , y: point.y, width: newSize.width, height: newSize.height)
@@ -881,7 +881,7 @@ class WJIndexView: UIControl {
         context.setFillColor(color.cgColor)
 
         // draw text
-        label.draw(in: rect, withAttributes: [NSAttributedStringKey.font:font])
+        label.draw(in: rect, withAttributes: [NSAttributedString.Key.font:font])
 
         // restore context state
         context.restoreGState();

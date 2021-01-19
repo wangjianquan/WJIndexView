@@ -93,7 +93,6 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource, WJIndexVi
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       
         return 50
     }
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

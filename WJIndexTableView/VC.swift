@@ -46,8 +46,8 @@ class VC: UIViewController {
         view.addSubview(indexView)
         view.addSubview(focusedLabel)
         
-        indexView.bringSubview(toFront: tableView)
-        focusedLabel.sendSubview(toBack: tableView)
+        indexView.bringSubviewToFront(tableView)
+        focusedLabel.sendSubviewToBack(tableView)
         
         focusedLabel.isHidden = true
         focusedLabel.font = UIFont.boldSystemFont(ofSize: 50)
@@ -86,7 +86,7 @@ class VC: UIViewController {
         super.viewDidLoad()
         
         setupView()
-        
+//        http://www.uqur.cn//index.php?m=version3&a=maxina_marka_list
         guard let url = URL(string: "http://192.168.199.200/index.php?m=version3&a=maxina_marka_list") else { return  }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -128,7 +128,7 @@ class VC: UIViewController {
 
 extension VC: TableViewIndexDelegate {
     func focusedIndex(_ index: Int, title: String) {
-        focusedLabel.bringSubview(toFront: self.tableView)
+        focusedLabel.bringSubviewToFront(self.tableView)
         focusedLabel.isHidden = false
         
         focusedLabel.text = title
@@ -136,7 +136,7 @@ extension VC: TableViewIndexDelegate {
     }
     
     func focusEnded() {
-        focusedLabel.sendSubview(toBack: self.tableView)
+        focusedLabel.sendSubviewToBack(self.tableView)
         focusedLabel.isHidden = true
     }
 }
